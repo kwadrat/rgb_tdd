@@ -1,5 +1,13 @@
 #!/usr/bin/python
 
+'''
+Given:
+1. status code: (0 - OK, other value - BAD)
+2. terminal window width
+
+shows red/green bar to visualize return code of previous command
+'''
+
 import sys
 
 if len(sys.argv) >= 2:

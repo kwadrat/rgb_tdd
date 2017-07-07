@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 '''
 Given:
@@ -18,7 +18,7 @@ if len(sys.argv) >= 2:
         col_char = '1'
     else:
         col_char = '2'
-    print ''.join((
+    print (''.join((
         esc,
         '[4',
         col_char,
@@ -26,13 +26,13 @@ if len(sys.argv) >= 2:
         ' ' * (cols_limit - 2),
         esc,
         '[0m',
-        ))
+        )))
 else:
-    print '''
+    print ('''
 Usage: %(prog_name)s status_code number_of_columns
 
 1. status code: 0 - OK (green color), other values - BAD (red color)
 2. number of columns: the width of text console
 ''' % dict(
         prog_name=sys.argv[0],
-        )
+        ))

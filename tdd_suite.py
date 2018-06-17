@@ -47,6 +47,14 @@ def perform_tests():
     add_all_fast(suite)
     return summary_status(suite)
 
+
+def perform_slow_tests():
+    suite = unittest.TestSuite()
+    add_all_fast(suite)
+    add_all_slow(suite)
+    return summary_status(suite)
+
+
 if __name__ == '__main__':
     result = perform_tests()
     sys.exit(result)

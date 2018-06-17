@@ -56,5 +56,8 @@ def perform_slow_tests():
 
 
 if __name__ == '__main__':
-    result = perform_tests()
+    if len(sys.argv) >= 2 and sys.argv[1] == 'slowtest':
+        result = perform_slow_tests()
+    else:
+        result = perform_tests()
     sys.exit(result)

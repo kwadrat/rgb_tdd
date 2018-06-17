@@ -34,9 +34,7 @@ def summary_status(suite):
 def perform_tests():
     suite = unittest.TestSuite()
     add_all_fast(suite)
-    text_test_result = unittest.TextTestRunner().run(suite)
-    result = not not (text_test_result.failures or text_test_result.errors)
-    return result
+    return summary_status(suite)
 
 if __name__ == '__main__':
     result = perform_tests()

@@ -26,6 +26,11 @@ def add_all_fast(suite):
         suite.addTest(unittest.makeSuite(one_test))
 
 
+def summary_status(suite):
+    text_test_result = unittest.TextTestRunner().run(suite)
+    return not not (text_test_result.failures or text_test_result.errors)
+
+
 def perform_tests():
     suite = unittest.TestSuite()
     add_all_fast(suite)

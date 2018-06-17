@@ -16,13 +16,24 @@ class TestSimpleExample(unittest.TestCase):
         '''
         self.assertEqual(0, 1)
 
+
 fast_test_ls = [
+    TestSimpleExample,
+    ]
+
+
+slow_test_ls = [
     TestSimpleExample,
     ]
 
 
 def add_all_fast(suite):
     for one_test in fast_test_ls:
+        suite.addTest(unittest.makeSuite(one_test))
+
+
+def add_all_slow(suite):
+    for one_test in slow_test_ls:
         suite.addTest(unittest.makeSuite(one_test))
 
 

@@ -12,11 +12,14 @@ import sys
 
 if len(sys.argv) >= 2:
     code = sys.argv[1]
-    value = int(code)
-    if value:
-        col_char = '1'
+    if code == 'y':
+        col_char = '3'
     else:
-        col_char = '2'
+        value = int(code)
+        if value:
+            col_char = '1'
+        else:
+            col_char = '2'
     cols_limit = int(sys.argv[2])
     esc = chr(27)
     print (''.join((

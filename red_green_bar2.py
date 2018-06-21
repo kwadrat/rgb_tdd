@@ -11,7 +11,8 @@ shows red/green bar to visualize return code of previous command
 import sys
 
 if len(sys.argv) >= 2:
-    value = int(sys.argv[1])
+    code = sys.argv[1]
+    value = int(code)
     if value:
         col_char = '1'
     else:

@@ -11,13 +11,17 @@ shows red/green bar to visualize return code of previous command
 import sys
 
 if len(sys.argv) >= 2:
-    value = int(sys.argv[1])
+    code = sys.argv[1]
+    if code == 'y':
+        col_char = '3'
+    else:
+        value = int(code)
+        if value:
+            col_char = '1'
+        else:
+            col_char = '2'
     cols_limit = int(sys.argv[2])
     esc = chr(27)
-    if value:
-        col_char = '1'
-    else:
-        col_char = '2'
     print (''.join((
         esc,
         '[4',

@@ -12,12 +12,12 @@ import sys
 
 if len(sys.argv) >= 2:
     value = int(sys.argv[1])
-    cols_limit = int(sys.argv[2])
-    esc = chr(27)
     if value:
         col_char = '1'
     else:
         col_char = '2'
+    cols_limit = int(sys.argv[2])
+    esc = chr(27)
     print (''.join((
         esc,
         '[4',

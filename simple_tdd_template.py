@@ -3,6 +3,7 @@
 
 '''
 Template file for testing functions and classes
+./simple_tdd_template.py test; red_green_bar.py $? $COLUMNS
 '''
 
 import sys

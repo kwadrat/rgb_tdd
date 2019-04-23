@@ -27,7 +27,8 @@ if len(sys.argv) >= 2:
         '[4',
         col_char,
         'm',
-        ' ' * (cols_limit - 2),
+        ' ' * (cols_limit - 2 - len(code)),
+        code,
         esc,
         '[0m',
         )))

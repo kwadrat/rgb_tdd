@@ -16,6 +16,7 @@ def main():
         if code == 'x':
             col_char = '3'
             cols_limit = 78
+            code = '' # No code provided - only yellow bar
         else:
             if code == 'y':
                 col_char = '3'

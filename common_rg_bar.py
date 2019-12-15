@@ -33,7 +33,7 @@ def main():
         else:
             start_text = ''
         esc = chr(27)
-        print (''.join((
+        print(''.join((
             start_text,
             esc,
             '[4',
@@ -45,7 +45,7 @@ def main():
             '[0m',
             )))
     else:
-        print ('''
+        print('''
     Usage: %(prog_name)s status_code number_of_columns
 
     1. status code: 0 - OK (green color), other values - BAD (red color)

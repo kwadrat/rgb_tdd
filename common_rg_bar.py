@@ -48,18 +48,7 @@ def main():
             start_text = sys.argv[3] + ' '
         else:
             start_text = ''
-        esc = chr(27)
-        print(''.join((
-            start_text,
-            esc,
-            '[4',
-            col_char,
-            'm',
-            ' ' * (cols_limit - 2 - len(code) - len(start_text)),
-            code,
-            esc,
-            '[0m',
-            )))
+        unicolor_emit(start_text, col_char, cols_limit, code)
     else:
         print('''
     Usage: %(prog_name)s status_code number_of_columns

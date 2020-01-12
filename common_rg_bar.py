@@ -11,6 +11,8 @@ shows red/green bar to visualize return code of previous command
 
 import sys
 
+esc = chr(27)
+
 def main():
     if len(sys.argv) >= 2:
         code = sys.argv[1]

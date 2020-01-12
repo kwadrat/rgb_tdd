@@ -47,6 +47,13 @@ def main():
             col_char = '3'
             cols_limit = 78
             code = '' # No code provided - only yellow bar
+        elif code == 't':
+            if len(sys.argv) >= 3:
+                cols_limit = int(sys.argv[2])
+            else:
+                cols_limit = 78
+            dual_tape_emit(cols_limit)
+            sys.exit(0)
         else:
             if code == 'y':
                 col_char = '3'

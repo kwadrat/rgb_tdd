@@ -28,7 +28,6 @@ def unicolor_emit(start_text, col_char, cols_limit, code):
 
 
 def dual_tape_emit(cols_limit):
-    esc = chr(27)
     red = [esc, '[4', '1', 'm', ' ']
     white = [esc, '[4', '7', 'm', ' ']
     end = [esc, '[0m']

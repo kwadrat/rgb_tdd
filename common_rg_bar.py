@@ -27,6 +27,19 @@ def unicolor_emit(start_text, col_char, cols_limit, code):
         )))
 
 
+def dual_tape_emit(cols_limit):
+    esc = chr(27)
+    red = [esc, '[4', '1', 'm', ' ']
+    white = [esc, '[4', '7', 'm', ' ']
+    end = [esc, '[0m']
+
+    all_text = (red + white) * (cols_limit // 2)
+    if cols_limit % 2:
+        all_text.extend(red)
+    all_text.extend(end)
+    print(''.join(all_text))
+
+
 def main():
     if len(sys.argv) >= 2:
         code = sys.argv[1]

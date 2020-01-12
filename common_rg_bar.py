@@ -13,6 +13,20 @@ import sys
 
 esc = chr(27)
 
+def unicolor_emit(start_text, col_char, cols_limit, code):
+    print(''.join((
+        start_text,
+        esc,
+        '[4',
+        col_char,
+        'm',
+        ' ' * (cols_limit - 2 - len(code) - len(start_text)),
+        code,
+        esc,
+        '[0m',
+        )))
+
+
 def main():
     if len(sys.argv) >= 2:
         code = sys.argv[1]

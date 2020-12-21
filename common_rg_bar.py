@@ -78,12 +78,6 @@ def main():
             start_text = ''
         unicolor_emit(start_text, col_char, cols_limit, code)
     else:
-        print('''
-    Usage: %(prog_name)s status_code number_of_columns
-
-    1. status code: 0 - OK (green color), other values - BAD (red color)
-    2. number of columns: the width of text console
-    3. (optional) Text to display
-    ''' % dict(
+        print(info_txt % dict(
             prog_name=sys.argv[0],
             ))

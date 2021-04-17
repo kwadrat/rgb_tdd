@@ -80,10 +80,7 @@ def main():
                 col_char = '3'
             else:
                 value = int(code)
-                if value:
-                    col_char = '1'
-                else:
-                    col_char = '2'
+                col_char = two_color(value)
             cols_limit = int(sys.argv[2])
         if len(sys.argv) >= 4:
             start_text = sys.argv[3] + ' '

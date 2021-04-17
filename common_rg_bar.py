@@ -61,6 +61,16 @@ def two_color(error_occured):
     return col_char
 
 
+def dual_emit(start_text, cols_limit, error_occured):
+    '''
+    Simplified version, 2 colors, for including
+    from other code
+    '''
+    col_char = two_color(error_occured)
+    code = str(error_occured)
+    unicolor_emit(start_text, col_char, cols_limit, code)
+
+
 def main():
     if len(sys.argv) >= 2:
         code = sys.argv[1]

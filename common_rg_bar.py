@@ -48,6 +48,19 @@ def dual_tape_emit(cols_limit):
     print(''.join(all_text))
 
 
+def two_color(error_occured):
+    '''
+    error_occured:
+    0 - OK (green)
+    other values - some error (red)
+    '''
+    if error_occured:
+        col_char = '1'
+    else:
+        col_char = '2'
+    return col_char
+
+
 def main():
     if len(sys.argv) >= 2:
         code = sys.argv[1]
